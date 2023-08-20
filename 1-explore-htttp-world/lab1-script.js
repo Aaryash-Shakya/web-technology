@@ -8,7 +8,7 @@ function callAPI(userName) {
         document.querySelector('#authorizedData').style.display = 'none'
     }
     fetch(`https://api.github.com/users/${userName}`)
-        .then(res => {  
+        .then(res => {
             if (res.status === 404) {
                 console.log(res);
                 return alert(`Error 404: Account not found`)
@@ -17,7 +17,7 @@ function callAPI(userName) {
                 console.log(res);
                 return alert(`Error 403: API fetch limit reached`)
             }
-            else if(res.ok) {
+            else if (res.ok) {
                 console.log('API call successful');
                 return res.json()
             }
@@ -34,7 +34,14 @@ function callAPI(userName) {
             document.querySelector('#resPublicRepos').innerHTML = userData.public_repos
             document.querySelector('#resGithubUrl').href = userData.html_url
             document.querySelector('#resGithubUsername').innerHTML = userData.login
-            document.querySelector('#resTwitterUrl').href = `https://twitter.com/${userData.twitter_username}` || 'https://twitter.com/'
+            // check if twitter account exists
+            if (userData.twitter_username == null) {
+                document.querySelector('#resTwitterUrl').style.display = 'none'
+            }
+            else{
+                document.querySelector('#resTwitterUrl').style.display = 'inline'
+            }
+            document.querySelector('#resTwitterUrl').href = `https://twitter.com/${userData.twitter_username}`
             document.querySelector('#resTwitterUsername').innerHTML = userData.twitter_username || 'null'
         })
         .catch(err => console.log(err))
