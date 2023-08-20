@@ -27,8 +27,8 @@ function callAPI(userName) {
             document.querySelector('#resAvatarUrl').src = userData.avatar_url || 'https://identicons.github.com/jasonlong.png'
             document.querySelector('#resName').innerHTML = userData.name || userData.login
             document.querySelector('#resCreatedAt').innerHTML = userData.created_at.substring(0, 10)
-            document.querySelector('#resLocation').innerHTML = userData.location || 'undefined'
-            document.querySelector('#resBio').innerHTML = userData.bio || 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure corrupti, deleniti quibusdam consequatur eaque quia autem totam ipsam natus ipsa qui.'
+            document.querySelector('#resLocation').innerHTML = userData.location || 'location unavailable'
+            document.querySelector('#resBio').innerHTML = userData.bio || "This User Hasn't Shared a Bio Yet"
             document.querySelector('#resFollowers').innerHTML = userData.followers
             document.querySelector('#resFollowing').innerHTML = userData.following
             document.querySelector('#resPublicRepos').innerHTML = userData.public_repos
@@ -38,7 +38,7 @@ function callAPI(userName) {
             if (userData.twitter_username == null) {
                 document.querySelector('#resTwitterUrl').style.display = 'none'
             }
-            else{
+            else {
                 document.querySelector('#resTwitterUrl').style.display = 'inline'
             }
             document.querySelector('#resTwitterUrl').href = `https://twitter.com/${userData.twitter_username}`
