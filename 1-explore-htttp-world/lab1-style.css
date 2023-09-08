@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+*{
+    box-sizing: border-box;
+}
+
+html {
+    --bg-color: #122333;
+    --card-color: #182b3c;
+    --accent-color: #2eac68;
+    --accent-hover-color: hsl(148, 58%, 30%);
+    /* --accent-color: hsl(272, 92%, 53%);
+    --accent-hover-color: hsl(272, 92%, 43%); */
+    --text-color: black;
+    --text-color: white;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.container-md {
+    min-height: 100vh;
+    background-color: black;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: url(https://coolbackgrounds.io/images/backgrounds/index/ranger-4df6c1b6.png); */
+    /* background: url(https://images.unsplash.com/photo-1659878997289-b9ab5a0663b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Z2xhc3Ntb3JwaGlzbXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80); */
+    /* background: url(https://besthqwallpapers.com/Uploads/3-9-2021/177861/purple-low-poly-background-4k-geometric-shapes-creative-low-poly-textures.jpg); */
+    /* background: url(https://i.pinimg.com/736x/2b/ac/38/2bac38a35adb674c9efce30a33597d8f.jpg); */
+    /* background: url(https://images.unsplash.com/photo-1619472351888-f844a0b33f5b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1228&q=80); */
+    /* background: url(https://wallpaperset.com/w/full/7/a/4/93831.jpg); */
+    /* background: url(https://w0.peakpx.com/wallpaper/166/199/HD-wallpaper-black-purple-triangles-abstract.jpg); */
+    background: url(https://w0.peakpx.com/wallpaper/398/210/HD-wallpaper-minimalism-triangle-art-minimalism-abstract-triangle.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.search-card,
+.user-card {
+    /* background-color: rgba(255, 255, 255, 0.2) !important; */
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    padding: 60px;
+    color: var(--text-color) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    background-clip: padding-box;
+    box-shadow: -10px 10px 10px rgba(46, 54, 68, 0.3);
+    box-shadow: -9px 10px 38px -11px rgba(0, 0, 0, 0.75), inset -5px 9px 53px -28px rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(15px) saturate(130%);
+    width: 100%;
+    border-radius: 20px;
+    z-index: 10;
+}
+
+.btn {
+    background-color: var(--accent-color) !important;
+    color: white !important;
+    font-size: 1.1rem !important;
+    width: 30% !important;
+}
+
+.btn:hover {
+    background-color: var(--accent-hover-color) !important;
+}
+
+/* user data */
+.github-avatar-container {
+    width: 30%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    overflow: clip;
+}
+
+.github-avatar {
+    width: 100%;
+}
+
+.follower-card {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0.6rem 0.5rem;
+}
+
+.follower-card-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.follower-card-item p {
+    color: #e1e1e1;
+    margin: 0;
+}
+
+.follower-card-divider {
+    height: 50px;
+    width: 1px;
+    background-color: #fafafa;
+}
+
+#authorizedData {
+    display: none;
+}
+
+.social-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.social-card-item {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 3px 20px;
+}
+
+.social-card-item:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}

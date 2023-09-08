@@ -1,0 +1,114 @@
+<!-- Lab 1: Select the user from a dropdown form and on submit fetch the github api associated to the user and display it -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github API fetch</title>
+    <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="https://github.githubassets.com/favicons/favicon-dark.svg">
+    <link rel="stylesheet" href="lab1-style.css">
+    <!-- fontawesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- bootstrap cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body class="container-md">
+    <div class="row w-100 d-flex justify-content-evenly align-items-center">
+        <div class="col-md-5 mb-md-0 mb-5">
+            <form class="search-card p-4">
+                <div class="mb-2">
+                    <h2>GitHub API</h2>
+                    <hr>
+                </div>
+                <div class="mb-2">
+                    <label class="form-label mt-2 fs-5">Search GitHub user</label>
+                    <div class="d-flex justify-content-center align-items-center gap-2">
+                        <input type="search" class="form-control" id="searchUserName" placeholder="Search GitHub user">
+                        <div class="btn" onclick="searchData()">
+                            SEARCH
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-2">
+                    <label class="form-label mt-2 fs-5">Select GitHub user</label>
+                    <div class="d-flex justify-content-center align-items-center gap-2">
+                        <select name="userName" id="userName" class="form-select">
+                            <option value="Aaryash-Shakya">Aaryash Shakya</option>
+                            <option value="ritushishir">Shishir Paudyal</option>
+                            <option value="Adityastha">Aditya Shrestha</option>
+                            <option value="benup211">Benup Ghimire</option>
+                            <option value="KaushalKishorMishra">Kaushal Kishor Mishra</option>
+                        </select>
+                        <div class="btn" onClick="selectData()">
+                            SELECT
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-5">
+            <div class="user-card p-md-5 p-4">
+                <div class="w-100 position-relative">
+                    <div class="mb-2 github-avatar-container ms-0">
+                        <img class="github-avatar" id="resAvatarUrl"
+                            src="https://identicons.github.com/jasonlong.png"
+                            alt="A profile image placeholder">
+                    </div>
+                    <p id="resCreatedAt" class="position-absolute end-0">2020-20-20</p>
+                </div>
+                <div class="mb-2">
+                    <h4 id="resName">Name Name</h4>
+                    <p id="resLocation">Location</p>
+                    <p class="bio" id="resBio">
+                        User Bio Here
+                    </p>
+                </div>
+                <div class="follower-card mb-2">
+                    <div class="follower-card-item">
+                        <h4 id="resFollowers">0</h4>
+                        <p>Followers</p>
+                    </div>
+                    <div class="follower-card-divider"></div>
+                    <div class="follower-card-item">
+                        <h4 id="resFollowing">0</h4>
+                        <p>Following</p>
+                    </div>
+                    <div class="follower-card-divider"></div>
+                    <div class="follower-card-item">
+                        <h4 id="resPublicRepos">0</h4>
+                        <p>Public Repo</p>
+                    </div>
+                </div>
+                <div class="follower-card" id="authorizedData">
+                    <span>Private Repo <sub>Only for Aaryash-Shakya</sub></span>
+                    <div class="btn" onclick="fetchPrivateRepo()">FETCH</div>
+                </div>
+                <h5 class="mt-2">Socials</h5>
+                <div class="social-card">
+                    <a class="social-card-item" id="resGithubUrl" target="_blank" href="#">
+                        <i class="fa-brands fa-github"></i>
+                        <span id="resGithubUsername">GitHub</span>
+                    </a>
+                    <!-- element is hidden by JS if no account is associated with the user -->
+                    <a class="social-card-item" id="resTwitterUrl" target="_blank" href="#">
+                        <i class="fa-brands fa-twitter"></i>
+                        <span id="resTwitterUsername">Twitter</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="lab1-script.js"></script>
+    <!-- bootstrap cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
