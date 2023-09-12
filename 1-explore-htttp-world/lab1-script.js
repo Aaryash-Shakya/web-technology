@@ -1,4 +1,4 @@
-const token = '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'
+const token = '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'
 
 function callAPI(userName) {
     if (userName === 'Aaryash-Shakya') {
