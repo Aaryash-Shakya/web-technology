@@ -144,36 +144,37 @@ function start() {
     let index = 0
     blogArray.forEach((item) => {
         exportComponent += `
-        <div class="blog-box" id="index-${index}">
-            <h3>${item.title}</h3>
-            <br/>
-            <div class="inner-container">
-                <div class="left">
-                    <a href="${item.refUrl}" target="_blank" class="image-box">
-                        <img src="${item.imageUrl}" alt="demo image">
-                    </a>
-                    <div class="button-box">
-                        <button class="btn" onclick="blogArray[${index}].changeStatus()" id="status-btn-${index}">Toggle:${item.status}</button>
-                        <button class="btn" onclick="blogArray[${index}].addComment()" id="comment-btn-${index}">Add Comment</button>
-                        <button class="btn" onclick="blogArray[${index}].addView()" id="read-btn-${index}">Mark as Read</button>
+        <div class="col-md-6 p-4">
+            <div class="blog-box" id="index-${index}">
+                <h3>${item.title}</h3>
+                <div class="inner-container">
+                    <div class="left">
+                        <a href="${item.refUrl}" target="_blank" class="image-box">
+                            <img src="${item.imageUrl}" alt="demo image">
+                        </a>
+                        </div>
+                        <div class="right data-box">
+                        <p>
+                            <strong>By:</strong> ${item.authorName}
+                        </p>
+                        <p>
+                            <strong>Added at:</strong> ${item.addedDate.getFullYear()}-${item.addedDate.getMonth()}-${item.addedDate.getDate()}
+                        </p>
+                        <p>
+                            <strong>Read by:</strong> ${item.viewCount}
+                        </p>
+                        <p>
+                            <strong>Comments:</strong> ${item.commentCount}
+                        </p>
+                        <p>
+                            <strong>Status:</strong> ${item.status}
+                        </p>
                     </div>
                 </div>
-                <div class="right data-box">
-                    <p>
-                        <strong>By:</strong> ${item.authorName}
-                    </p>
-                    <p>
-                        <strong>Added at:</strong> ${item.addedDate.getFullYear()}-${item.addedDate.getMonth()}-${item.addedDate.getDate()}
-                    </p>
-                    <p>
-                        <strong>Read by:</strong> ${item.viewCount}
-                    </p>
-                    <p>
-                        <strong>Comments:</strong> ${item.commentCount}
-                    </p>
-                    <p>
-                        <strong>Status:</strong> ${item.status}
-                    </p>
+                <div class="button-box">
+                    <button class="button" onclick="blogArray[${index}].changeStatus()">Toggle:${item.status}</button>
+                    <button class="button" onclick="blogArray[${index}].addComment()">Add Comment</button>
+                    <button class="button" onclick="blogArray[${index}].addView()">Mark as Read</button>
                 </div>
             </div>
         </div>
