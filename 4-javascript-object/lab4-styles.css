@@ -30,7 +30,6 @@
     --primary: #383838;
     --secondary: #262626;
     --accent: #8c8c8c;
-
 }
 
 body {
@@ -57,7 +56,7 @@ body {
 }
 
 .blog-box:hover {
-    box-shadow: -4px 4px 15px 6px rgba(255, 255, 255, 0.3);
+    box-shadow: -2px 2px 15px 6px rgba(255, 255, 255, 0.3);
 }
 
 h3 {
@@ -115,7 +114,7 @@ h3 {
 }
 
 .button {
-    background-color: var(--accent);
+    background-color: hsl(0, 0%, 80%);
     padding: 0.6rem;
     border-radius: 0.5rem;
     font-size: 1rem;

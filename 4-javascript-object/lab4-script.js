@@ -161,7 +161,7 @@ function start() {
                             <strong>Added at:</strong> ${item.addedDate.getFullYear()}-${item.addedDate.getMonth()}-${item.addedDate.getDate()}
                         </p>
                         <p>
-                            <strong>Read by:</strong> ${item.viewCount}
+                            <strong>Reads:</strong> ${item.viewCount}
                         </p>
                         <p>
                             <strong>Comments:</strong> ${item.commentCount}
