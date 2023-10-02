@@ -1,4 +1,4 @@
-blogContainer = document.querySelector('.blog-container')
+let blogContainer = document.querySelector('.blog-container')
 
 let dummyDate = new Date()
 
@@ -140,9 +140,13 @@ let blogArray = [
     }
 ]
 function start() {
+    // initially initialize export component with empty string
     let exportComponent = ``
+    // current index in the array initialize to 0
     let index = 0
+    // loop for each array element
     blogArray.forEach((item) => {
+        // append html with template literal to end of exportComponent as string
         exportComponent += `
         <div class="col-md-6 p-4">
             <div class="blog-box" id="index-${index}">
@@ -179,8 +183,10 @@ function start() {
             </div>
         </div>
         `
+        // increment index for next object in array
         index++
     })
+    // put the html string inside exportComponent as HTML inside blogContainer
     blogContainer.innerHTML = exportComponent
 }
 
