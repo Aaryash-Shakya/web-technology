@@ -8,7 +8,7 @@ let projectArray = [
         title: "Explore HTTP World",
         description: "To get familiar with API, HTTP request and response to fetch github profile using username.",
         documentation: "https://docs.google.com/document/d/1ASxivGWqHFIoxQ5YgiF0r3POel3PZFX6jj1bqSC7cBY/edit#heading=h.n9riga8o68dv",
-        demoUrl: "./1-explore-htttp-world/lab1-github-api-fetch.html",
+        demoUrl: "./1-explore-http-world/lab1-github-api-fetch.html",
     },
     {
         number: 2,
@@ -24,7 +24,7 @@ let projectArray = [
         title: "Getting Started with Bootstrap",
         description: "To learn to install and integrate Bootstrap into an existing project to make the project responsive.",
         documentation: "https://docs.google.com/document/d/1ASxivGWqHFIoxQ5YgiF0r3POel3PZFX6jj1bqSC7cBY/edit#heading=h.ukmc52v7j7mz",
-        demoUrl: "./1-explore-htttp-world/lab1-github-api-fetch.html",
+        demoUrl: "./1-explore-http-world/lab1-github-api-fetch.html",
     },
     {
         number: 4,
